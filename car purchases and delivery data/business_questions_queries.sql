@@ -1,4 +1,4 @@
--- top vehicle makers by number of customers
+-- top vehicle brands by number of customers
 select p.vehicle_maker, count(o.customer_id) as no_of_customers
 from newninja.order_t o
 join product_t p

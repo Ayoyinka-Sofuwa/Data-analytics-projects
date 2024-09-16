@@ -87,9 +87,3 @@ This analysis provides insights into the handling of service requests, helping t
 - **Looker Studio:** For building interactive dashboards to visualize the service performance metrics.
 - **Jupyter Notebooks:** To present the analysis, visualizations, and findings in an organized manner.
 - **GitHub:** To store and share the code, project documentation, and outputs.
-
-## How to Run the Project
-
-1. Clone the repository to your local machine:
-   ```bash
-   git clone 

@@ -1,31 +1,52 @@
-# SQL Queries and Predictive Analysis
-### SQL
-In this project, the first task was to work on [SQL queries](https://github.com/Ayoyinka-Sofuwa/Financial-project/blob/main/SQL%20problem.ipynb) on a small dataset, I used [SQLite3 in python](https://docs.python.org/3/library/sqlite3.html) to execute and perform operations using pandas.
+## SQL Analysis and Predictive Modeling for Financial Dataset - 2021
 
-In the first data, provided, we have 15 entries for 5 unique customers with the amount they spent, and on what day it was spent.
-I calculated:
-* The total amount spent by all visitors.
-* All users who visited in February AND spent more than 1000 naira
-* The highest and lowest amount spent in each month
-* The total monthly purchases.
-* How much each user spends on their second purchase.
+### Project Overview
+This project consists of two main phases:
+1. **SQL Query Analysis**: Executing SQL queries using SQLite3 and pandas to derive insights from a small dataset of customer purchases.
+2. **Predictive Analysis**: Building machine learning models using Logistic Regression and RandomForestClassifier to predict loan defaults in a financial dataset.
+
+---
+
+### SQL Queries
+
+#### Data Overview
+A small dataset of 15 entries for 5 unique customers was analyzed using **SQLite3** in Python, with pandas used for data manipulation. The dataset included details about customer purchases, the amount spent, and the purchase date.
+
+#### SQL Operations
+Key operations performed on the dataset:
+1. **Total Amount Spent by All Visitors**: Calculated the total expenditure by all customers.
+2. **Customers Who Visited in February and Spent More than 1000 Naira**: Queried customers who made significant purchases in February.
+3. **Highest and Lowest Amount Spent in Each Month**: Extracted the maximum and minimum amounts spent monthly.
+4. **Total Monthly Purchases**: Calculated the total purchases per month.
+5. **Second Purchase Amount for Each User**: Identified how much each customer spent on their second purchase.
 
 ### Predictive Analysis
+
 #### Overview
-Here I explored a financial dataset, withdrew insights from it, preprocessed the data and performed predictive analysis using Logistic Regression and RandomForestClassifier algorithms from Scikit learn
-#### Summary
+A financial dataset containing 10,000 entries was explored to predict loan defaults using machine learning models. The dataset included 5 features, such as **employment status**, **loan amount**, and **bank balance**, which were used to predict whether a customer would default on their loan repayment.
 
-This dataset contains 10,000 entries of data about loan defaulters in a financial institution with 5 features based on their employment status, the loan amount and their bank balance, and to predict whether or not they will default on repaying a loan."
+#### Data Preprocessing
+- Cleaned and preprocessed the data to handle missing values and prepare it for modeling.
+- Split the dataset into training and testing sets for model evaluation.
 
-The best performing model was the model trained with the RandomForestClassifier algoritm with an accuracy of 0.9696
+#### Model Building and Evaluation
+Two models were built using **Scikit-learn**:
+1. **Logistic Regression**: Achieved an accuracy of 0.9676.
+2. **RandomForestClassifier**: Achieved a higher accuracy of 0.9696, making it the best-performing model.
 
-#### Some Insights:
-[I worked on a dataset with 10,000 entries using python](https://github.com/Ayoyinka-Sofuwa/Financial-project/blob/main/Financial%20data.ipynb), and from the data, we see that:
-* About 71% of the customers are employed and 29% aren't.
-* Some of the customers at every income level defaulted (about 3% total), regardless of whether they were earning high or not. This indicates that a high income is not an absolute determinant that a customer will repay a loan.
-* The bank balance feature has a very low significance in determining whether a person will repay or default on a loan
-* And the annual salary has the most significance on whether a person will repay a loan
+#### Key Insights
+- **Employment Status**: 71% of the customers were employed, while 29% were not.
+- **Loan Defaults Across Income Levels**: About 3% of customers defaulted on their loans, regardless of income level, indicating that income alone does not guarantee loan repayment.
+- **Bank Balance**: The bank balance feature had a low significance in predicting loan defaults.
+- **Annual Salary**: This feature was the most significant in determining whether a customer would repay a loan.
 
-#### Classification tasks
-I used the LogisticRegression algorithm to predict whether a customer will default on a loan and got an accuracy of 0.9676 and the RandomForestClassifier algorithm to predict the same and got an accuracy of 0.9696.
-The RandomForestClassifier algorithm performed a little better but generally, this scores indicated a good performing model.
+#### Model Performance
+- The **Logistic Regression** model performed well with an accuracy of **0.9676**.
+- The **RandomForestClassifier** model slightly outperformed with an accuracy of **0.9696**, indicating that it was better suited for this dataset.
+
+---
+
+### Conclusion
+This project demonstrated the power of SQL for quick insights into customer purchasing behaviour and machine learning for predicting financial outcomes. The RandomForestClassifier was the best model for predicting loan defaults, offering actionable insights for this financial institution.
+
+
